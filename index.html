@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <title>Flawless's Website</title>
+    
+    <link rel="stylesheet" href="styles.css">
+    <style>
+         * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: radial-gradient(#43cea2, #185a9d);
+        }
+
+        .hero {
+            display: flex;
+            justify-content: center;
+            min-height: 100vh;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .content {
+            position: absolute;
+
+        }
+
+        .content h2 {
+            position: absolute;
+            color: #fff;
+            transform: translate(-150%, 50%);
+            font-size: 8em;
+        }
+
+        /**/
+        .content h2:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px #03a9f4;
+        }
+
+        .content h2:nth-child(2) {
+            color: #03a9f4;
+            animation: animate 4s ease-in-out infinite;
+        }
+
+        @keyframes animate {
+
+            0%,
+            100% {
+                clip-path: polygon(0% 45%, 15% 44%, 54% 60%, 33% 49%, 70% 60%, 85% 59%, 100% 52%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
+            }
+
+            50% {
+                clip-path: polygon(0% 60%, 16% 65%, 51% 63%, 33% 66%, 66% 50%, 84% 45%, 100% 55%, 100% 100%, 100% 100%, 0% 100%, 0% 100%);
+
+            }
+        }
+
+        .content2 {
+            
+            position: absolute;
+        }
+
+        .content2 h2 {
+            position: absolute;
+            color: #fff;
+            transform: translate(-150%, 120%);
+            font-size: 8em;
+        }
+
+        .content2 h2:nth-child(1) {
+            color: transparent;
+            -webkit-text-stroke: 2px #03a9f4;
+        }
+
+        .content2 h2:nth-child(2) {
+            color: #03a9f4;
+            animation: animate 4s ease-in-out infinite;
+        }
+
+        .contents {
+            color: #03a9f4;
+            position: absolute;
+            top: 70%;
+            left: 5%;
+            transform: translate(10%);
+            z-index: 2;
+
+        }
+
+        /*h3 {
+            font-style: italic;
+            font-family: 'Times New Roman';
+            font-size: 30px;
+            margin: 0px -10px 10px;
+            /*up,,height
+            line-height: 10px;
+        }*/
+
+        button {
+            font-size: 22px;
+            color: #fbfcfd;
+            background-color: #00999c;
+            padding: 10px 25px;
+            background: transparent;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            outline: none;
+            cursor: pointer;
+        }
+        .contents button:hover {
+            transition: 1s;
+            background-color: #ecf5f5;
+            color: #00999c;
+        }
+
+        .image {
+            width: 100px;
+            height: 10px;
+            position: absolute;
+            
+            padding: 10px 300px;
+            top: 0;
+
+        }
+
+        
+        /*creating bubbles*/
+        .bubbles img {
+            width: 50px;
+            animation: bubble 7s linear infinite;
+        }
+
+        .bubbles {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: absolute;
+            bottom: -70px;
+        }
+
+        @keyframes bubble {
+            0% {
+                transform: translateY(0);
+                opacity: 0;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            70% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-80vh);
+                opacity: 0;
+            }
+        }
+
+        .bubbles img:nth-child(1) {
+            animation-delay: 2s;
+            width: 25px;
+        }
+
+        .bubbles img:nth-child(2) {
+            animation-delay: 1s;
+        }
+
+        .bubbles img:nth-child(3) {
+            animation-delay: 3s;
+            width: 25px;
+        }
+
+        .bubbles img:nth-child(4) {
+            animation-delay: 4.5s;
+        }
+
+        .bubbles img:nth-child(5) {
+            animation-delay: 3s;
+        }
+
+        .bubbles img:nth-child(6) {
+            animation-delay: 6s;
+            width: 20px;
+        }
+
+        .bubbles img:nth-child(7) {
+            animation-delay: 7s;
+            width: 35px;
+        }
+       @media screen and (max-width:600px){
+    .hero{
+        padding: 0;
+    }
+    .image{
+        padding: 10px;
+    }
+    .content{
+        font-size: 11px;
+        padding: 5px;
+        width: 160px;
+        right: -60px;
+        top: 150px;
+    }
+    .content2{
+        font-size: 11px;
+        padding: 5px;
+        width: 160px;
+        right: -60px;
+        top: 150px;
+    }
+}
+    </style>
+</head>
+
+<body>
+    
+    <!--inputing an image-->
+    <div class="image">
+        <img src="images/newpic5.PNG" align="left-side">
+    </div>
+    
+    <!--Nav Bar Creation-->
+    <div class="container-index">
+        <!--manage entire elements on page -->
+        <div class="nav-wrapper">
+            <!--only has two div under it left side and right side-->
+            <div class="left-side">
+                <!--titles to the left of page-->
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About Me</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="gallery.html">Gallery</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="b.html">Blog</a>
+                </div>
+                <div class="nav-link-wrapper">
+                    <a href="contact.html">Contact</a>
+                </div>
+            </div>
+            <div class="right-side">
+                <div class="brand">
+                    <div>Flawless's WebPage</div>
+                    <!--logo/sitename-->
+                </div>
+            </div>
+    
+        </div>
+    </div>
+    
+    <!--homepage creation-->
+    <div class="hero">
+        <div class="contents">
+            
+            <a href='about.html'><button type="button"> Take a Tour </button></a>
+        </div>
+        <div class="content">
+            <h2>Ethel's</h2>
+            <h2>Ethel's</h2>
+        </div>
+        <div class="content2">
+            <h2>Studio</h2>
+            <h2>Studio</h2>
+        </div>
+        
+        <!--sidebar-->
+        <div class="sidebar">
+            <img src="images/menu.png" class="menu">
+    
+            <div class="social-links">
+                <a href="free.html"><img src="images/fb.png"></a>
+                <a href="free.html"><img src="images/ig.png"></a>
+                <a href="free.html"><img src="images/tw.png"></a>
+            </div>
+            <div class="useful-links">
+                <a href="free.html"><img src="images/share.png"></a>
+                <a href="free.html"><img src="images/info.png"></a>
+    
+            </div>
+        </div>
+        <!--creating bubbles-->
+        <div class="bubbles">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+            <img src="images/bubble.png">
+        </div>
+    
+    </div>
+            
+
+</body>

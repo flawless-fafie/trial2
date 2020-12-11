@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Flawless's Website</title>
+   
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bootstrap-grid.css">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        background:radial-gradient(#43cea2, #185a9d) ;
+    }
+    
+     /*utilities*/
+     h1,h4,h5,p {
+        margin: 0;
+     } 
+     .bg_dark {
+        background-color: #212121;
+     }
+     .bg_light{
+        background-color:#06d6a0 !important;
+     }
+     .text_light{
+        color: #fff;
+     }
+     .btn_dark,
+     .btn_light{
+        display: inline-block;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 30px;
+        border-radius: 100px;
+        font-size: 14px;
+        letter-spacing: 2px;
+        transition: all 0.4s;
+     }
+     .btn_dark{
+        background-color: #212121;
+     }
+     .btn_light{
+        background-color: #06d6a0;
+     }
+     .btn_dark:hover{
+        background-color: #fff;
+        color: #06d6a0;
+     }
+     .margin_top{
+        margin-top: 15px;
+     }
+     .image_responsive {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+     }
+   /*Hero_section*/
+    .hero_section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 85vh;
+        background-image: radial-gradient(#43cea2, #185a9d) ,url(images/sadza_1.jpg);
+        background-size: cover;
+        background-blend-mode: multiply;
+    }
+
+    .hero_text{
+        color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .hero_text h1{
+        font-size: 100px;
+        font-weight: 500; 
+    }
+    .hero_text p{
+        letter-spacing: 5px;
+    }
+    /*receipe section*/
+    .receipe_section{
+        padding:70px 0 ;
+    }
+    .image_wrapper{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        background-color: red;
+        overflow: hidden;
+        border-radius: 2px;
+    }
+    .image_wrapper img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        transition: all 0.4s;
+    }
+
+    .image_wrapper:hover img{
+        transform: scale(1.2 , 1.2);
+        cursor: pointer;
+    }
+    .image_wrapper-text{
+        padding: 30px 15px;
+        max-height: 150px;
+        position: absolute;
+        bottom: 0px;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+    }
+    .image_wrapper-text h5{
+        color: /*#f4511e*/#06d6a0;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    .image_wrapper-text p{
+        line-height: 26px;
+    }
+
+    /*About Section*/
+    .about_section{
+        padding: 50px 0px;
+        background: radial-gradient(#43cea2, #185a9d) ;
+        color: #fff;
+    }
+
+    .about_section h4{
+        font-size: 28px;
+        font-weight: 500;
+    }
+
+    .about_section p{
+        line-height: 29px;
+        font-weight: 100;
+    }
+    .image_background {
+        position: relative;
+        z-index: 1;
+
+    }
+    .image_background:before {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        content: "";
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        background-color: #000;
+
+    }
+    .image_background img{
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    /*extra section*/
+    .extra_section{
+        padding: 70px 0;
+    }
+
+    .extra_section h4{
+        font-size: 20px;
+        font-weight: 500;
+        text-align: center;
+    }
+    .extra_section p{
+        line-height: 36px;
+    }
+
+    /*subscribe section*/
+    .subscribe_section{
+        padding: 40px 0;
+        background-color: #212121;
+        color: #fff;
+    }
+    .subscribe_section form{
+        display: flex;
+    }
+    .subscribe_section button{
+        background-color: #06d6a0;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+
+    }
+
+    /*category section*/
+    .category_section{
+        padding: 70px 0;
+    }
+
+
+    
+</style>
+
+<body>
+    <header>
+        <!--Nav Bar Creation-->
+        <div class="container">
+            <!--manage entire elements on page -->
+            <div class="nav-wrapper">
+                <!--only has two div under it left side and right side-->
+                <div class="left-side">
+                    <!--titles to the left of page-->
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About Me</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="b.html">Blog</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="brand">
+                        <div>Flawless's Web Page</div>
+                        <!--logo/sitename-->
+                    </div>
+                </div>
+
+            </div>
+        </div>   
+    </header>
+    <!--food blog-->
+
+    <!--hero section-->
+    <div class="hero_section">
+        <div class="hero_text">
+            <h1>Food Blog</h1>
+            <p>Welcome to my food blog hope you enjoy the receipes</p>
+            <a href="free.html" class="btn_dark margin_top">Read Receipes</a>
+        </div>
+    </div>
+
+    <!--receipes Section-->
+    <div class="receipe_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="image_wrapper">
+                       <img src="images/first.jpg"> 
+                       <div class="image_wrapper-text">
+                           <h5>Lunch</h5>
+                           <p>7 Quick & Healthy Lunch Box Ideas For the Week (Vegetarian)</p>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image_wrapper">
+                        <img src="images/second.jpg">
+                        <div class="image_wrapper-text">
+                            <h5>Breakfast</h5>
+                            <p>5 easy toast recipes for breakfast & evening snacks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="image_wrapper">
+                        <img src="images/third.jpg">
+                        <div class="image_wrapper-text">
+                            <h5>Dinner</h5>
+                            <p>4 Healthy & quick dinner recipes| easy dinner party receipes ideas </p>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--About Section-->
+    <div class="about_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="image_background">
+                        <img src="images/mypic1 copy.JPG" class="image_responsive" >
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h4>Whose The Food Lover</h4>
+                    <p>Well I tried to explain my relationship with food but I think I have not done good enough :). Food for me is like a
+                    stress buster, a shoulder to cry on while I am sad, a true friend indeed. When I am stressed I turn to food , when I
+                    am happy I turn to food, when I am confused I for sure turn to food.
+                    I don't eat because I want to or have to eat. I eat because I love food. It will be completely wrong if I say I only
+                    love to eat , I love to cook too. And If I go with people what they say about my hand cooked food in two words "It's
+                    awesome !!!!". I love experimenting with flavors , spices . I love visiting places and try different cuisines , try to
+                    understand the food they eat.</p>
+                    <a href="contact.html" class="btn_dark">Know More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--More Foods-->
+    <div class="extra_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-5">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="images/food_4.jpg" class="image_responsive">
+                        </div>
+                        <div class="col-md-8 bg_dark text_light p-3">
+                            <h4>Peanut Butter Oatmeal Choco-Chip Cookies</h4>
+                            <p>I could put peanut butter on everything! and I consider it healthy so I eat
+                                 it all the time.Quite crunchy as well!!</p>
+                            <a href="free.html" class="btn_light">Read Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-5">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="images/food_1.jpg" class="image_responsive">
+                        </div>
+                        <div class="col-md-8 bg_dark text_light p-3">
+                            <h4>Oats With Kiwi And Banana Topping ***</h4>
+                            <p>Oatmeal is one of the most nutritious breakfast foods. It may help a person lose weight, reduce their risk of heart
+                            disease.</p>
+                            <a href="free.html" class="btn_light">Read Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="images/food_2.jpg" class="image_responsive">
+                        </div>
+                        <div class="col-md-8 bg_dark text_light p-3">
+                            <h4>Juicy Oven Baked Chicken Breast</h4>
+                            <p>My all-time favorite oven baked chicken breasts recipe! It never fails me, thanks to this simple 5-step method that is
+                            easy to make and customize with your favorite seasonings.</p>
+                            <a href="free.html" class="btn_light">Read Recipe</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="images/sadza.jpg" class="image_responsive">
+                        </div>
+                        <div class="col-md-8 bg_dark text_light p-3">
+                            <h4>Sadza, Pork And Vegetables</h4>
+                            <p>Sadza originates from Zimbabwe. The name sadza means meal,
+                                It is a two part recipe with sadza on one and the accompanying stew or vegetable relish on the other.</p>
+                            <a href="free.html" class="btn_light">Read Recipe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--suubscribe Section-->
+    <div class="subscribe_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <p>Sign up for email updates and get a free eCookbook with our 25 recipes</p>
+                </div>
+                <div class="col-md-4">
+                    <form>
+                        <input type="text">
+                        <a href="free.html"><button type="submit">subscribe</button></a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--category Section-->
+    <div class="category_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="image_wrapper">
+                        <img src="images/cat1.jpg">
+                        <div class="image_wrapper-text bg_light">
+                           
+                            <p>Spicy Sesame Zoodles with Crispy Tofu in bowl</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image_wrapper">
+                        <img src="images/cat2.jpg">
+                        <div class="image_wrapper-text bg_light">
+                            
+                            <p>Spicy Sesame Zoodles with Crispy Tofu in bowl</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image_wrapper">
+                        <img src="images/cat3.jpg">
+                        <div class="image_wrapper-text bg_light">
+                            
+                            <p>Spicy Sesame Zoodles with Crispy Tofu in bowl </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="image_wrapper">
+                        <img src="images/cat4.jpg">
+                        <div class="image_wrapper-text bg_light">
+                            
+                            <p>Spicy Sesame Zoodles with Crispy Tofu in bowl </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+        
+</body>    
+

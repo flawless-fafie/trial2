@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Flawless's Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        }
+      body{  
+          
+          background: radial-gradient(#43cea2, #185a9d);
+        }
+        .Bd{
+            font-family: 'Playfair Display', serif;
+            display: grid;
+            align-content: center;
+            min-height: 100vh;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 90vh;
+            width: 85vw;
+            margin: 0 auto;
+        }
+        .image{
+            background:url(images/Personn.jpg) center/cover no-repeat ;
+        }
+        .contents{
+            /*background: #fff;*/
+            background: transparent;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            border: solid;
+        }
+        .contents h2{
+            text-transform: uppercase;
+            font-size: 36px;
+            letter-spacing: 6px;
+            opacity: 0.9;
+        }
+        .contents span{
+            height: 0.5px;
+            width: 80px;
+            background: #777;
+            margin: 30px 0;
+        }
+        .contents p{
+            padding-bottom: 15px;
+            font-weight: 300;
+            opacity: 0.7;
+            width: 60%;
+            text-align: center;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+        .links{
+            margin: 15px 0;   
+        }
+        .links li{
+            border: 0.5px solid #777;
+            list-style: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            width: 160px;
+            text-align: center;
+        }
+        .links li a{
+            text-transform: uppercase;
+            color: #777;
+            text-decoration: none;
+        }
+        .links li:hover{
+            border-color: #06d6a0;
+        }
+        .links li:hover a{
+            color :#06d6a0;
+        } 
+        .vertical-line{
+            height: 30px;
+            width: 0.5px;
+            background: #777;
+            margin: 0 auto;
+        }
+        .icons{
+            display: flex;
+            padding: 15px 0;
+        }
+        .icons li{
+            display: block;
+            padding: 5px;
+            margin: 5px;
+        }
+        .icons li i{
+            font-size: 26px;
+            opacity: 0.8;
+        }
+        .icons li i:hover{
+            color: #06d6a0;
+        }
+        @media(max-width: 992px){
+        section{
+            grid-template-columns: 1fr;
+            width: 100%;
+        }
+        .image{
+            height: 100vh;
+        }
+        .content{
+            height: 100vh;
+        }
+        .content h2{
+            font-size: 20px;
+            margin-top: 50px;
+        }
+        .content span{
+            margin: 20px 0;
+        }
+        .content p{
+            font-size: 14px;
+        }
+        .links li a{
+            font-size: 14px;
+        }
+        .links{
+            margin: 5px 0;
+        }
+        .links li{
+            padding: 6px 10px;
+        }
+        .icons li i{
+            font-size: 15px;
+        }
+    }
+    /*services*/
+    .s_container{
+       width: 100%;
+       height: 100vh; 
+       overflow: hidden;
+    }
+    .text{
+        width: 70%;
+        margin: 80px auto 80px auto;
+        text-align: center;
+    }
+    .text h1{
+        margin-bottom: 40px;
+        position: relative;
+        /*color: white;*/
+    }
+    .text h1::before{
+        content: '';
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        background-color: #777;
+        width: 100px;
+        height: 0.5px; /*line height*/
+    }
+    .text p{
+        font-size: 18px;
+        color: #262626;
+        letter-spacing: 1px;
+    }
+    .boxes{
+        width: 80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 300px;
+        grid-gap: 0 15px;
+    }
+    .box{
+        border: 2px solid lightgray;
+        position: relative;
+        cursor: pointer;
+    }
+    .box .inner_box{
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        color: lightgray;
+        transition: .3s;
+    }
+    .inner_box span{
+        background-color: #262626;
+        display: inline-block;
+        width: 100px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 60px;
+    }
+    .inner_box h3{
+        margin-top: 20px;
+        font-size: 25px;
+    }
+    .box p{
+        font-size: 18px;
+        color: #262626;
+        text-align: justify;
+        word-break: break-all;
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 80%;
+        text-align: center;
+        margin-top: 100px; 
+        opacity: 0;
+    }
+    .box:hover{
+        border-color:#06d6a0 ;
+    }
+    .box:hover .inner_box{
+        margin-top: -120px;
+        color: #06d6a0;
+    }
+    .box:hover p{
+        opacity: 1;
+        margin-top: -50px;
+        transition: .4s;
+        transition-delay: .3s;
+    }
+
+    /*testimonals*/
+    .testimonials{
+        min-height: 100vh;
+        /*background-color: #000000;*/
+        float:left;
+        width: 100%;
+        padding: 0px 15px;
+    }
+   .test_container{
+        max-width: 1170px;
+        margin: 0px -300px 0px 300px;/*top- left-bottom-right */
+        
+    }
+    .testimonials .title{
+	margin-bottom:60px
+    }
+
+    .testimonials .title h1{
+        text-align: center; 
+        color: #262626;
+        text-transform: uppercase;
+        font-size: 36px;
+        margin: auto; 
+    }
+    
+    .testimonials .slider{
+        border: 1px solid #333333;
+        max-width: 600px;
+        margin: auto; /* determines if its at center*/
+        text-align: center;
+        padding: 30px;
+        
+    }
+    .testimonials .slider .slide{
+        display: none;
+    }
+    .testimonials .slider .slide.active{
+        display: block;
+        animation: slide 1s ease;/**/
+    }
+
+    @keyframes slide{
+        0%{
+            opacity:0;
+            transform: translateX(-15px);
+        }
+        100%{
+        opacity:1;
+            transform: translateX(0px);	
+        }
+    }
+    .testimonials .slider p{
+        font-size:18px;
+        color:#ffffff;
+        word-spacing: 2px;
+    }
+    .testimonials .slider .client-info h3{
+        font-weight: bold;
+        color:#fff;
+        font-size:18px;
+        margin:30px 0 10px;
+    }
+    .testimonials .slider .client-info span{
+        display: block;
+        font-size:16px;
+        color:#11bead;
+    }
+    .testimonials .slider-indicator{
+        text-align: center;
+        padding-top:20px;/**/
+    }
+    .testimonials .slider-indicator img{
+        max-height:80px;
+        max-width:80px;
+        border-radius:50%;
+        display: inline-block;
+        margin:0 8px;
+        opacity:0.2;
+        border:4px solid #fff;
+        cursor: pointer;
+        transition: opacity 1s ease;
+    }
+    .testimonials .slider-indicator img.active{
+        opacity:1;
+    }
+
+     @media(max-width: 992px){
+         .testimonials{
+            width: 100%;
+         }
+         .test_container{
+            margin: 0px 100px 0px 100px;
+         }
+     }
+
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!--Nav Bar Creation-->
+        <div class="container">
+            <!--manage entire elements on page -->
+            <div class="nav-wrapper">
+                <!--only has two div under it left side and right side-->
+                <div class="left-side">
+                    <!--titles to the left of page-->
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="about.html">About Me</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="b.html">Blog</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="brand">
+                        <div>Flawless's Page</div>
+                        <!--logo/sitename-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <!--sidebar-->
+    <div class="sidebar">
+        <img src="images/menu.png" class="menu">
+    
+        <div class="social-links">
+            <a href="free.html"><img src="images/fb.png"></a>
+            <a href="free.html"><img src="images/ig.png"></a>
+            <a href="free.html"><img src="images/tw.png"></a>
+        </div>
+        <div class="useful-links">
+            <a href="free.html"><img src="images/share.png"></a>
+            <a href="free.html"><img src="images/info.png"></a>
+    
+        </div>
+    </div>
+    <!--about-->
+    
+   <div class="Bd">
+        <section>
+            <div class="image">
+                <!--image here-->
+            </div>
+        
+            <div class="contents">
+                <h2>Who I Am</h2>
+                <span>
+                    <!--line here--> </span>
+        
+                <p>Hello,My name is Ethel Mandeya. I am a Devolper and also a Designer/Artist.If you have any Project or if you
+                    want to
+                    make a software for your business contact me
+                    I am also a self taught Baker and a Cook.</p>
+        
+                <ul class="links">
+                    <li><a href="gallery.html">work</a></li>
+        
+                    <div class="vertical-line"></div>
+        
+                    <li><a href="#">service</a></li>
+        
+                    <div class="vertical-line"></div>
+        
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+        
+                <ul class="icons">
+                    <li>
+                        <i class="fa fa-twitter"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-facebook"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-github"></i>
+                    </li>
+                    <li>
+                        <i class="fa fa-pinterest"></i>
+                    </li>
+                </ul>
+        
+            </div>
+        </section>
+   </div>
+<!--services-->
+<div class="services">
+    <div class="s_container">
+        <div class="text">
+            <h1>SERVICES WE PROVIDE</h1>
+            <p>Hover On Image</p>
+        </div>
+        <div class="boxes">
+            <div class="box">
+                <div class="inner_box">
+                    <span><i class="fas fa-paint-brush"></i> </span>
+                        <h3>Web Design</h3>
+                </div>
+                <p>Encompasses many different skills and disciplines in the production and maintenance of websites.
+                     The different areas of web design include web graphic design; user interface design; authoring
+                </p>
+            </div>
+            <div class="box">
+                <div class="inner_box">
+                    <span><i class="fas fa-camera"></i> </span>
+                    <h3>Photography</h3>
+                </div>
+                <p>Responsible for the look of final photographs to be published in a book or periodical or that appear digitally. 
+                    Judge and alter pictures to meet assignment needs, and make sure all deadlines are met.
+                </p>
+            </div>
+            <div class="box">
+                <div class="inner_box">
+                    <span><i class="fas fa-edit"></i> </span>
+                    <h3>Web Developer</h3>
+                </div>
+                <p>Design and create websites.Responsible for the look of the site. 
+                   Also responsible for the site's technical aspects, such as its performance and capacity,
+                </p>
+            </div>
+             
+        </div>
+    </div>
+
+</div>
+<!--testimonals-->
+<section class="testimonials">
+    <div class="test_container">
+        <div class="title">
+            <h1>What My Clients Say</h1>
+        </div>
+        <div class="slider">
+            <div class="slide active">
+                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor vitae felis.
+                    Mauris nibh diam, pharetra eu nunc id, lobortis faucibus purus. Praesent sit amet urna id velit
+                    dignissim pellentesque. "</p>
+                <div class="client-info">
+                    <h3>Presley</h3>
+                    <span>Founder at Gikio</span>
+                </div>
+            </div> 
+            <div class="slide">
+                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor vitae felis.
+                    Mauris nibh diam, pharetra eu nunc id, lobortis faucibus purus. Praesent sit amet urna id velit
+                    dignissim pellentesque. "</p>
+                <div class="client-info">
+                    <h3>Tariro Kupenga</h3>
+                    <span>Founder at KrimSim</span>
+                </div>
+            </div>
+            <div class="slide">
+                <p>" Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas auctor vitae felis.
+                    Mauris nibh diam, pharetra eu nunc id, lobortis faucibus purus. Praesent sit amet urna id velit
+                    dignissim pellentesque. "</p>
+                <div class="client-info">
+                    <h3>Sijabulisiwe</h3>
+                    <span>Founder at Chamber</span>
+                </div>
+            </div>
+        </div>
+        <div class="slider-indicator"> 
+            <img src="images/Test_3.png" class="active" alt="img" data-id="0" />
+            <img src="images/Test_2.png" alt="img" data-id="1" />
+            <img src="images/Test_1.png" alt="img" data-id="2" />
+        </div>
+    </div>
+</section>
+    
+
+<script> 
+    const slides = document.querySelector(".slider").children;
+    const indicatorImages = document.querySelector(".slider-indicator").children;
+
+    for(let i=0;i<indicatorImages.length;i++){
+        indicatorImages[i].addEventListener("click",function(){
+         //console.log(this.getAttribute("data-id"))
+           for (let j = 0; j < indicatorImages.length; j++) {
+             indicatorImages[j].classList.remove("active");
+           }
+            this.classList.add("active");
+            const id=this.getAttribute("data-id")
+           for(let j=0; j<slides.length; j++){
+            slides[j].classList.remove("active");
+           }
+
+            slides[id].classList.add("active");
+        })
+    }
+</script>    
+<script> src="all.min.js"</script>
+</body>

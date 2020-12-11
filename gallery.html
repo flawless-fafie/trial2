@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My Portfolios</title>
+        <link rel="stylesheet" href="styles.css">
+        <style>
+
+            body{
+                
+                overflow-x: hidden;
+                /*background-image:url(images/background.png);linear-gradient(-90deg,#2f80ed,#55caf2)*/
+                background:radial-gradient(#43cea2, #185a9d) ;
+            }
+            
+            .first{
+                color: #000;
+                text-align: center;
+                text-transform: uppercase;     
+                margin-top: -20px;
+                padding: 10px; 
+            }
+            .first h1{
+                font-size: 50px;
+                text-indent: -30%;
+                text-shadow:1px 1px 2px green, 0 0 1em blue, 0 0 0.2em blue;
+                font-weight: 50; 
+            }
+
+            /*slideshow section*/
+            .hi-slide{
+                position:relative;
+                width: 754px;
+                height: 292px;
+                margin: 115px auto 0;
+            }
+            .hi-slide .hi-next,
+             .hi-slide .hi-prev{
+                position: absolute;
+                top: 50%;
+                width: 40px;
+                height: 40px;
+                margin-top: -200px;/*-20*/
+                border-radius: 50px;
+                line-height: 40px;
+                text-align: center;
+                cursor: pointer;
+                background-color: white; /*try alice blue on trial mode*/
+                color: black;
+                transition: all 0.7s;
+                font-size: 20px;
+                font-weight: bold;
+            }
+            .hi-slide .hi-next:hover,
+            .hi-slide .hi-prev:hover{
+                opacity: 1;
+                background-color: white;
+            }
+
+            .hi-slide .hi-prev{
+                left: -70px;
+            }
+
+            .hi-slide .hi-prev::before{
+                content: '<';
+            }
+
+            .hi-slide .hi-next{
+                right: -70px;
+            }
+
+            .hi-slide .hi-next::before{
+                content: '>';
+            }
+
+            .hi-slide > ul{
+                list-style: none;
+                position: relative;
+                width: 754px;
+                height: 292px;
+                margin: 0;
+                padding: 0;
+            }
+
+            .hi-slide > ul > li{
+                overflow: hidden;
+                position: absolute;
+                z-index: 0;
+                left: 377px;
+                top: 147px;
+                width: 0;
+                height: 0;
+                margin: 0;
+                padding: 0;
+                border: 3px solid white;
+                background-color: #333;
+                cursor: pointer;
+            }
+
+            .hi-slide > ul > li > img{
+                width: 100%;
+                height: 100%;
+                background-position: center;
+            }
+
+            /*portfolio gallery*/
+
+            .main{
+                position: relative;
+                height: 100%;
+                width: 100%;
+            }
+
+            .main h1{
+                position: relative;
+                height: auto;
+                width: 550px;
+                left: 50%;
+                transform: translateX(-50%);
+                margin: 5% 0 2% 0;
+                text-align: center;
+                font-size: 2.8em;
+                font-weight: 50;
+                letter-spacing: 1.5px;
+                color: #000;
+                text-shadow:1px 1px 2px green, 0 0 1em blue, 0 0 0.2em blue;
+                border-left: 5px solid #017bf5;
+                border-right: 5px solid#017bf5;
+                background: rgba(0, 0, 0, 0.05) ;
+            }
+
+            .main p{
+                position: relative;
+                height: auto;
+                width: 100%;
+                text-align: center;
+                font-weight:500 ;
+                font-size: 1.5em;
+                letter-spacing: 1px;
+                color: #777;
+             
+            }
+
+            .main .gallery{
+                position: relative;
+                height: auto;
+                width: 90%;
+                margin: auto;
+                padding: 45px 0;
+                display: grid;
+                grid-template-columns: auto auto auto auto;/*write auto four times because we want four rows*/
+                grid-gap: 2vh;
+                grid-auto-flow: dense;
+            }
+
+            .main .gallery .img{
+                position: relative;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.9);
+                border-radius: 2px;
+            }
+
+            .main .gallery .img:first-child{
+                grid-column-start: span 2;
+                grid-row-start:span 2;
+            }
+            .main .gallery .img:nth-child(2n+3){
+                grid-row-start: span 2;
+            }
+            .main .gallery .img:nth-child(4n+5){
+                grid-column-start: span 2;
+                grid-row-start: span 2;
+            }
+            .main .gallery .img:nth-child(6n+7){
+                grid-row-start: span 1;
+            }
+            .main .gallery .img:nth-child(8n+9){
+                grid-column-start: span 1;
+                grid-row-start: span 1;
+            }
+            .main .gallery .img img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                filter: brightness(0.5)grayscale(100);
+                transition: 0.3s ease-in-out;
+            }
+            .main .gallery .img:hover img{
+                filter: brightness(1)grayscale(0);
+            }
+
+            @media only screen and (max-width:768px){
+                .main h1{
+                    font-size: 1.8em;
+                    width: 400px;
+                }
+                .main p{
+                    font-size: 1.2em;
+                }
+                .main .gallery{
+                    display:grid;
+                    grid-template-columns: auto auto auto;
+                }
+            }
+
+
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <!--Nav Bar Creation-->
+        <div class="container">
+            <!--manage entire elements on page -->
+            <div class="nav-wrapper">
+                <!--only has two div under it left side and right side-->
+                <div class="left-side">
+                    <!--titles to the left of page-->
+                    <div class="nav-link-wrapper">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="about.html">About Me</a>
+                    </div>
+                    <div class="nav-link-wrapper active-nav-link">
+                        <a href="gallery.html">Gallery</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="b.html">Blog</a>
+                    </div>
+                    <div class="nav-link-wrapper">
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+                <div class="right-side">
+                    <div class="brand">
+                        <div>Flawless's Web Page</div>
+                        <!--logo/sitename-->
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <!--heading 1-->
+        <div class="first">
+            <h1>Ethel's <br> Studio Portfolios</h1>
+            <p>Check Out My latest Work On Editing Potraits</p>
+        </div>
+        <!--sidebar-->
+        <div class="sidebar">
+            <img src="images/menu.png" class="menu">
+        
+            <div class="social-links">
+                <a href="free.html"><img src="images/fb.png"></a>
+                <a href="free.html"><img src="images/ig.png"></a>
+                <a href="free.html"><img src="images/tw.png"></a>
+            </div>
+            <div class="useful-links">
+                <a href="free.html"><img src="images/share.png"></a>
+                <a href="free.html"><img src="images/info.png"></a>
+        
+            </div>
+        </div>
+        <!--slideshow creation-->
+        <div class="slide hi-slide">
+            <div class="hi-prev"></div>
+            <div class="hi-next"></div>
+            <ul>
+                <li>
+                    <img src="images/mypic0.JPEG">
+                </li>
+                <li>
+                    <img src="images/mypic9.jpg">
+                </li>
+                <li>
+                    <img src="images/mypic4.JPEG">
+                </li>
+                <li>
+                    <img src="images/mypic12.JPEG">
+                </li>
+                <li>
+                    <img src="images/mypic2.JPG">
+                </li>
+                <li>
+                    <img src="images/mypic6.JPEG">
+                </li>
+                <li>
+                    <img src="images/mypic11.JPEG">
+                </li>
+                
+            </ul>
+        </div>
+        
+        <!--slideshow creation 2-->
+        <div class="main">
+            <h1>Ethel Studio's Sketches</h1>
+            <p>Here Are Some Of My ArtWork :-</p>
+            <div class="gallery">
+                <div class="img">
+                    <img src="images/art1.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art2.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art3.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art4.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art5.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art6.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art7.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art8.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art9.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art10.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art11.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art12.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art13.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art14.JPG" alt="">
+                </div>
+                <div class="img">
+                    <img src="images/art2.JPG" alt="">
+                </div>
+                
+                
+            </div>
+        </div>
+
+        <!---->
+        
+
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+            <script type="text/javascript" src="js/jquery.hislide.js"></script>
+            <script>
+                $('.slide').hiSlide();
+            </script>
+    </body>
+</html>
